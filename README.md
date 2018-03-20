@@ -60,7 +60,7 @@ dim(testing)
 lda_model<-train(classe~ ., data=training, method="lda")
 set.seed(200)
 predict<-predict(lda_model,testing)
-pred1<-confusionMatrix(predict,testing$classe)
+confusionMatrix(predict,testing$classe)
 ```
 
 The LDA model gave a 70% accuracy on the testing set, with the expected out of sample error around 30%.
@@ -70,7 +70,7 @@ The LDA model gave a 70% accuracy on the testing set, with the expected out of s
 decision_tree_model<-rpart(classe~ ., data=training,method="class")
 set.seed(300)
 predict<-predict(decision_tree_model,testing,type="class")
-pred2<-confusionMatrix(predict,testing$classe)
+confusionMatrix(predict,testing$classe)
 ```
 The Decision Tree Model gave a 74% accuracy on the testing set, with the expected out of sample error around 26%.
 
@@ -79,7 +79,7 @@ The Decision Tree Model gave a 74% accuracy on the testing set, with the expecte
 random_forest_mod<-randomForest(classe~ ., data=training, ntree=500)
 set.seed(300)
 predict<-predict(random_forest_mod, testing, type ="class")
-pred3<-confusionMatrix(predict,testing$classe)
+confusionMatrix(predict,testing$classe)
 ```
 The Random Forest Model gave a 99.6% accuracy on the testing set, with the expected out of sample error around 0.4%.
 
