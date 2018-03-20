@@ -4,9 +4,6 @@ author: "Daria Kirilenko"
 date: "March 18, 2018"
 output: html_document
 ---
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ### Objective
 
@@ -42,7 +39,7 @@ clean_test<-test[,c(test_clean,"problem_id")]
 ```
 
 #### Check the dimensions of the clean test and train sets
-```{r, echo=TRUE}
+```{r}
 dim(clean_test)
 dim(clean_train)
 ```
