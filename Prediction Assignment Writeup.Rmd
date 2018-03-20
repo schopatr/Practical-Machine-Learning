@@ -18,27 +18,27 @@ https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
 https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
 
 #### Install/load the required packages needed for the creation of the model
-```r
+```{r}
 library(caret)
 library(rpart)
 library(randomForest)
 ```
 
 #### Load the training and testing datasets
-```{r, message=FALSE}
+```{r}
 train<-read.csv("C:/Users/aao1009/Desktop/pml-training.csv",na.strings=c("NA","#DIV/0!",""))
 test<-read.csv("C:/Users/aao1009/Desktop/pml-testing.csv",na.strings=c("NA","#DIV/0!",""))
 ```
 
 #### Remove null columns and the first 7 columns that will not be used
-```{r, echo=TRUE}
+```{r}
 test_clean <- names(test[,colSums(is.na(test)) == 0]) [8:59]
 clean_train<-train[,c(test_clean,"classe")]
 clean_test<-test[,c(test_clean,"problem_id")]
 ```
 
 #### Check the dimensions of the clean test and train sets
-```{r, echo=TRUE}
+```{r}
 dim(clean_test)
 dim(clean_train)
 ```
