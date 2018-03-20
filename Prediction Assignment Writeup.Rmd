@@ -61,7 +61,7 @@ lda_model<-train(classe~ ., data=training, method="lda")
 set.seed(200)
 predict<-predict(lda_model,testing)
 pred1<-confusionMatrix(predict,testing$classe)
-pred1
+print(pred1)
 ```
 
 The LDA model gave a 70% accuracy on the testing set, with the expected out of sample error around 30%.
