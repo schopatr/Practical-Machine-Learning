@@ -1,4 +1,4 @@
-# Practical-Machine-Learning
+# Practical-Machine-Learning - Final Assignment
 ### Objective
 
 The purpose of this project was to quantify how well the participants performed a barbell lifting exercise and to classify the measurement read from an accelerometer into 5 different classes (Class A:Class E).
