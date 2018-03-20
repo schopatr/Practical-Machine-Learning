@@ -4,9 +4,6 @@ author: "Daria Kirilenko"
 date: "March 18, 2018"
 output: html_document
 ---
-```r
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ### Objective
 
