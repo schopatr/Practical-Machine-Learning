@@ -18,7 +18,7 @@ https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
 https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
 
 #### Install/load the required packages needed for the creation of the model
-```{r, echo=TRUE}
+```r
 library(caret)
 library(rpart)
 library(randomForest)
